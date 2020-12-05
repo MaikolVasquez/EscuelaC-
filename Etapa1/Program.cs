@@ -25,7 +25,8 @@ namespace Etapa1
                        Util.printTitle(asignatura.Nombre);
                        foreach (var evaluacion in asignatura.Evaluaciones)
                        {
-                           Console.WriteLine(evaluacion.Nombre);
+                           Console.WriteLine($"{evaluacion.Nombre} Nota {evaluacion.Nota}");
+                           
                        }
                    }
                }
