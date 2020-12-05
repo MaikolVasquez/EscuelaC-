@@ -10,21 +10,27 @@ namespace CoreEscuela.Entidades
         {
             public Escuela Escuela { get; set; }
 
-            public List<ObejtoEscuelaBase> ListaObj()
+            public List<ObejtoEscuelaBase> ListaObj(
+                    bool traerCursos = true,
+                    bool traerAlumnos = true,
+                    bool traerAsignaturas = true,                    
+                    bool traerEvaluaciones = true
+            
+            )
             {
                 var ListaObjetos = new List<ObejtoEscuelaBase>();
 
                 ListaObjetos.Add(Escuela);
-                ListaObjetos.AddRange(Escuela.Cursos);
+                 if(traerCursos){ListaObjetos.AddRange(Escuela.Cursos);};
                 foreach (var Curso in Escuela.Cursos)
                 {
-                    ListaObjetos.AddRange(Curso.Alumnos);
+                    if(traerAlumnos){ListaObjetos.AddRange(Curso.Alumnos);};
                     foreach (var Alumno in Curso.Alumnos)
                     {
-                        ListaObjetos.AddRange(Alumno.Asignaturas);
+                        if(traerAsignaturas){ListaObjetos.AddRange(Alumno.Asignaturas);};
                         foreach (var asignatura in Alumno.Asignaturas)
                         {
-                            ListaObjetos.AddRange(asignatura.Evaluaciones);                            
+                            if(traerEvaluaciones){ListaObjetos.AddRange(asignatura.Evaluaciones);};                          
                         }
                     }
                 }
