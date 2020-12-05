@@ -9,12 +9,17 @@ namespace Etapa1
         static void Main(string[] args)
         {
            
-           var escuela1 = new EscuelaEngine();
-           escuela1.inicializar();
+           var engine = new EscuelaEngine();
+           engine.inicializar();
+           var objetosEscuela = engine.ListaObj();
         
            
+
+        Util.printTitle(engine.Escuela.Nombre);
+        
+
            //Util.Timbrar();
-           Util.printTitle($"Bienvenidos a la Escuela {escuela1.Escuela.Nombre}");
+           /*Util.printTitle($"Bienvenidos a la Escuela {escuela1.Escuela.Nombre}");
            foreach (var curso in escuela1.Escuela.Cursos)
            {               
                foreach (var al in curso.Alumnos)
@@ -30,7 +35,7 @@ namespace Etapa1
                        }
                    }
                }
-           }
+           }*/
             
         }
 

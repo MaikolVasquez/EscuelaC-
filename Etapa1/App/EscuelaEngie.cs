@@ -10,6 +10,26 @@ namespace CoreEscuela.Entidades
         {
             public Escuela Escuela { get; set; }
 
+            public List<ObejtoEscuelaBase> ListaObj()
+            {
+                var ListaObjetos = new List<ObejtoEscuelaBase>();
+
+                ListaObjetos.Add(Escuela);
+                ListaObjetos.AddRange(Escuela.Cursos);
+                foreach (var Curso in Escuela.Cursos)
+                {
+                    ListaObjetos.AddRange(Curso.Alumnos);
+                    foreach (var Alumno in Curso.Alumnos)
+                    {
+                        ListaObjetos.AddRange(Alumno.Asignaturas);
+                        foreach (var asignatura in Alumno.Asignaturas)
+                        {
+                            ListaObjetos.AddRange(asignatura.Evaluaciones);                            
+                        }
+                    }
+                }
+                return ListaObjetos;
+            }
             public void EscuelaEngie()
             {
                                                

@@ -11,9 +11,10 @@ namespace CoreEscuela.Entidades
 
         public static void printTitle(string titulo)
         {
-            printline(titulo.Length, '=');
-            Console.WriteLine(titulo);
-            printline(titulo.Length, '=');
+            string titulocool = $"|  {titulo}  |";
+            printline(titulocool.Length, '=');
+            Console.WriteLine(titulocool);
+            printline(titulocool.Length, '=');
         }
                public static void Timbrar()
                 {           
