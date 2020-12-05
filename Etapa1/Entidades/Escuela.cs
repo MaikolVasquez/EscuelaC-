@@ -1,17 +1,10 @@
-using System;
 using System.Collections.Generic;
 
 namespace CoreEscuela.Entidades
 {
-    class Escuela
+    class Escuela : ObejtoEscuelaBase
     {
-        string name;
-       public string Name
-       {
-           get { return name; }
-           set { name = value; }
-       }
-        public string UniqID { get; private set; }
+        
         public int AñoDeCreacion { get; set; }
 
         public string Pais { get; set; }
@@ -23,8 +16,8 @@ namespace CoreEscuela.Entidades
 
         public Escuela(string nombre, int año)
         {
-            UniqID = Guid.NewGuid().ToString();
-            this.Name = nombre;
+            
+            this.Nombre = nombre;
             this.AñoDeCreacion = año;
         }
         
@@ -32,7 +25,7 @@ namespace CoreEscuela.Entidades
 
         public override string ToString()
         {
-            return $"Nombre : {name}\n{AñoDeCreacion}\n{TipoEscuela}\n{Pais} {Ciudad}";
+            return $"Nombre : {Nombre}\n{AñoDeCreacion}\n{TipoEscuela}\n{Pais} {Ciudad}";
         }
     }
 }

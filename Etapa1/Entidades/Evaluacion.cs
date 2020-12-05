@@ -1,11 +1,10 @@
-using System;
+
 
 namespace CoreEscuela.Entidades
 {
-    public class Evaluacion
+    public class Evaluacion : ObejtoEscuelaBase
     {
-        public string UniqID { get; private set; }
-        public string Nombre { get; set; }
+        
 
         public Alumno Alumno { get; set; }
         
@@ -13,9 +12,6 @@ namespace CoreEscuela.Entidades
 
         public double Nota { get; set; }
 
-        public Evaluacion()
-        {
-            UniqID = Guid.NewGuid().ToString();
-        }
+      
     }
 }

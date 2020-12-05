@@ -34,7 +34,7 @@ namespace CoreEscuela.Entidades
         private List<Evaluacion> GenerarEvaluaciones()
         {
             string[] tema = { "Inicial", "Formativa", "Parcial", "Sumativa", "Global", "Previa", "Final" };        
-            string[] nivel = { "Basica", "Quis", "Media", "Completa", "reiterativa"};
+            string[] nivel = { "Basica", "Quiz", "Media", "Completa", "reiterativa"};
 
             var ListaEvaluaciones = from t in tema
                                from n in nivel                               
@@ -111,7 +111,7 @@ namespace CoreEscuela.Entidades
 
         public override string ToString()
         {
-            return $"{Escuela.Name}\n{Escuela.AñoDeCreacion}\n{Escuela.Ciudad}\n{Escuela.Pais}\n";
+            return $"{Escuela.Nombre}\n{Escuela.AñoDeCreacion}\n{Escuela.Ciudad}\n{Escuela.Pais}\n";
         }
 
  

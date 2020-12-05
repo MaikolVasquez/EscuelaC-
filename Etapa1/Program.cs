@@ -14,12 +14,12 @@ namespace Etapa1
         
            
            //Util.Timbrar();
-           Util.printTitle($"Bienvenidos a la Escuela {escuela1.Escuela.Name}");
+           Util.printTitle($"Bienvenidos a la Escuela {escuela1.Escuela.Nombre}");
            foreach (var curso in escuela1.Escuela.Cursos)
-           {
+           {               
                foreach (var al in curso.Alumnos)
                {    
-                   Util.printTitle(al.Nombre);
+                   Util.printTitle($"{al.Nombre} curso {curso.Nombre}");
                    foreach (var asignatura in al.Asignaturas)
                    {
                        Util.printTitle(asignatura.Nombre);
