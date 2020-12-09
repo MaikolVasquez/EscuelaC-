@@ -41,7 +41,34 @@ namespace CoreEscuela.Entidades
                                                
             
             }
-    
+            public Dictionary<ListaLaveDiccionario, IEnumerable<ObejtoEscuelaBase>> GetObjetosDiccionario()
+            {
+                var lista = new Dictionary<ListaLaveDiccionario, IEnumerable<ObejtoEscuelaBase>>();
+                
+                    lista.Add(ListaLaveDiccionario.Escuela, new[] {Escuela});
+                    lista.Add(ListaLaveDiccionario.Cursos, Escuela.Cursos); 
+                    var listaTempAlumnos = new List<Alumno>();
+                    var listaTempAsignaturas = new List<Asignatura>();
+                    var listaTempEvaluaciones = new List<Evaluacion>();
+
+
+                    foreach (var cursos in Escuela.Cursos)
+                    {
+                        listaTempAlumnos.AddRange(cursos.Alumnos); 
+                        foreach (var Alumno in cursos.Alumnos)
+                        {
+                            listaTempAsignaturas.AddRange(Alumno.Asignaturas); 
+                            foreach (var Asignatura in Alumno.Asignaturas)
+                            {
+                                listaTempEvaluaciones.AddRange(Asignatura.Evaluaciones);                                
+                            }
+                        }
+                    }
+                    lista.Add(ListaLaveDiccionario.Alumnos, listaTempAlumnos); 
+                    lista.Add(ListaLaveDiccionario.Asignaturas, listaTempAsignaturas); 
+                    lista.Add(ListaLaveDiccionario.Evaluaciones, listaTempEvaluaciones); 
+                return lista;
+            }
             public void inicializar()
             {
                     Escuela = new Escuela("Platzi M", 2020);  
