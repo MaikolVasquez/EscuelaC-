@@ -54,6 +54,7 @@ namespace CoreEscuela.Entidades
 
                     foreach (var cursos in Escuela.Cursos)
                     {
+                        
                         listaTempAlumnos.AddRange(cursos.Alumnos); 
                         foreach (var Alumno in cursos.Alumnos)
                         {

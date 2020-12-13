@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\m11_6\\OneDrive\\Escritorio\\C#\\Etapa1\\Etapa1.csproj": {}
+    "C:\\Users\\m11_6\\OneDrive\\Escritorio\\C#\\EscuelaC-\\Etapa1\\Etapa1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\m11_6\\OneDrive\\Escritorio\\C#\\Etapa1\\Etapa1.csproj": {
+    "C:\\Users\\m11_6\\OneDrive\\Escritorio\\C#\\EscuelaC-\\Etapa1\\Etapa1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\m11_6\\OneDrive\\Escritorio\\C#\\Etapa1\\Etapa1.csproj",
+        "projectUniqueName": "C:\\Users\\m11_6\\OneDrive\\Escritorio\\C#\\EscuelaC-\\Etapa1\\Etapa1.csproj",
         "projectName": "Etapa1",
-        "projectPath": "C:\\Users\\m11_6\\OneDrive\\Escritorio\\C#\\Etapa1\\Etapa1.csproj",
+        "projectPath": "C:\\Users\\m11_6\\OneDrive\\Escritorio\\C#\\EscuelaC-\\Etapa1\\Etapa1.csproj",
         "packagesPath": "C:\\Users\\m11_6\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\m11_6\\OneDrive\\Escritorio\\C#\\Etapa1\\obj\\",
+        "outputPath": "C:\\Users\\m11_6\\OneDrive\\Escritorio\\C#\\EscuelaC-\\Etapa1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\m11_6\\AppData\\Roaming\\NuGet\\NuGet.Config"

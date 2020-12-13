@@ -11,3 +11,16 @@ C:\Users\m11_6\OneDrive\Escritorio\C#\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.cspr
 C:\Users\m11_6\OneDrive\Escritorio\C#\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.dll
 C:\Users\m11_6\OneDrive\Escritorio\C#\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.pdb
 C:\Users\m11_6\OneDrive\Escritorio\C#\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.genruntimeconfig.cache
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.exe
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.deps.json
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.runtimeconfig.json
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.runtimeconfig.dev.json
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.dll
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.pdb
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.csprojAssemblyReference.cache
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.AssemblyInfoInputs.cache
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.AssemblyInfo.cs
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.csproj.CoreCompileInputs.cache
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.dll
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.pdb
+C:\Users\m11_6\OneDrive\Escritorio\C#\EscuelaC-\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.genruntimeconfig.cache
