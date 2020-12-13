@@ -9,16 +9,19 @@ namespace Etapa1
     {
         static void Main(string[] args)
         {
+            //AppDomain.CurrentDomain.ProcessExit += finalizarAplicacion;
+            //AppDomain.CurrentDomain.ProcessExit += (o, s)=> Console.WriteLine("Adios  Adios");
            
            var engine = new EscuelaEngine();
            engine.inicializar();
            var objetosEscuela = engine.ListaObj(traerEvaluaciones:false,traerAsignaturas:false);
-                           
+                                                                  
 
-        Util.printTitle(engine.Escuela.Nombre);
-                       
-        var dicc = engine.GetObjetosDiccionario();    
-        engine.imprimirDiccionario(dicc);                        
+        var nuevoReporteador = new Reporteador(engine.GetObjetosDiccionario());        
+        nuevoReporteador.getNotas();
+                
+
+        //engine.imprimirDiccionario(dicc);                        
 
 
            //Util.Timbrar();
@@ -42,6 +45,10 @@ namespace Etapa1
             
         }
 
-        
+        private static void finalizarAplicacion(object sender, EventArgs e)
+        {
+            Util.Timbrar();
+            Util.printTitle("Finzalizando la eschuela chaoooo ");
+        }
     }
 }
