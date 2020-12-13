@@ -30,7 +30,7 @@ namespace CoreEscuela.Entidades
                         if(traerAsignaturas){ListaObjetos.AddRange(Alumno.Asignaturas);};
                         foreach (var asignatura in Alumno.Asignaturas)
                         {
-                            if(traerEvaluaciones){ListaObjetos.AddRange(asignatura.Evaluaciones);};                          
+                            if(traerEvaluaciones){ListaObjetos.AddRange(asignatura.Evaluaciones);};
                         }
                     }
                 }
@@ -69,6 +69,38 @@ namespace CoreEscuela.Entidades
                     lista.Add(ListaLaveDiccionario.Asignaturas, listaTempAsignaturas); 
                     lista.Add(ListaLaveDiccionario.Evaluaciones, listaTempEvaluaciones); 
                 return lista;
+            }
+            public void imprimirDiccionario(Dictionary<ListaLaveDiccionario, IEnumerable<ObejtoEscuelaBase>> diccionario, bool dameAlumnos = true)
+            {                
+                foreach (var keyValuePair in diccionario)
+                {                    
+                    Util.printTitle(keyValuePair.Key.ToString());
+                    foreach (var llaves in keyValuePair.Value)
+                    {
+                        switch (llaves)
+                        {
+                            case Curso cursos:
+                                 Console.WriteLine(cursos.Nombre);
+                            break;
+
+                            case Alumno alumnos:
+                                 
+                                 foreach (var asignatura in alumnos.Asignaturas)
+                                 {
+                                    Console.WriteLine($"Alumno : {alumnos.Nombre}\nMateria :{asignatura.Nombre}");
+                                    foreach (var evaluaciones in asignatura.Evaluaciones)
+                                    {
+                                        Console.WriteLine($"  {evaluaciones.Nombre} >> Nota : {evaluaciones.Nota}");
+                                    }                                    
+                                 }
+                            break;
+                                                       
+                            default:
+
+                            break;
+                        }
+                    }
+                }
             }
             public void inicializar()
             {

@@ -17,7 +17,8 @@ namespace Etapa1
 
         Util.printTitle(engine.Escuela.Nombre);
                        
-        var dicc = engine.GetObjetosDiccionario();                            
+        var dicc = engine.GetObjetosDiccionario();    
+        engine.imprimirDiccionario(dicc);                        
 
 
            //Util.Timbrar();
