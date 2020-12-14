@@ -113,6 +113,10 @@ namespace CoreEscuela.Entidades
                     cargarCursos();                                          
                     
                     cargarAsignaturas();
+
+                    cargarEvaluaciones();
+
+                    cargarNotas();
                     
                         
             }
@@ -128,6 +132,42 @@ namespace CoreEscuela.Entidades
             return ListaEvaluaciones.OrderBy((al)=> al.UniqID).Take(5).ToList();
         }
 
+
+
+        public void cargarEvaluaciones()
+        {
+            foreach (var curso in Escuela.Cursos)
+            {
+                foreach (var alumno in curso.Alumnos)
+                {                    
+                    foreach (var asignatura in alumno.Asignaturas)
+                    {     
+                            asignatura.Evaluaciones = GenerarEvaluaciones();                        
+                    }
+                }
+            }
+        }
+        public void cargarNotas()
+        {
+            
+            foreach (var curso in Escuela.Cursos)
+            {
+                foreach (var alumno in curso.Alumnos)
+                {                    
+                    foreach (var asignatura in alumno.Asignaturas)
+                    {     
+                            foreach (var evaluacion in asignatura.Evaluaciones)
+                            {
+                                Random numerorandom = new Random();
+                                double numerogenerado = (numerorandom.Next(1,5) + numerorandom.NextDouble());
+                                evaluacion.Nota = Math.Round(numerogenerado, 2);
+                            }                     
+                    }
+                }
+            }
+        }
+
+
         private void cargarAsignaturas()
         {
             var Asignaturas = new List<Asignatura>()            
@@ -139,27 +179,14 @@ namespace CoreEscuela.Entidades
                 new Asignatura{Nombre = "Deporte"},
                 new Asignatura{Nombre = "Programacion"}
             };
-            
-            
+                                                    
             foreach (var curso in Escuela.Cursos)
             {
                 foreach (var al in curso.Alumnos)
                 {
-                    al.Asignaturas = Asignaturas;
-                    foreach (var asignatura in al.Asignaturas)
-                    {
-                        Random cantidad = new Random();
-                        asignatura.Evaluaciones = GenerarEvaluaciones();
-                        foreach (var evaluacion in asignatura.Evaluaciones)
-                        {                            
-                            double cantidadrandom = (cantidad.NextDouble() + cantidad.Next(0,5));
-                            evaluacion.Nota = Math.Round(cantidadrandom,1);
-                        }
-                    }
+                    al.Asignaturas = Asignaturas;                   
                 }
             }
-                
-            
         }
 
         private List<Alumno> GenerarAlumnos(int cantidad)
@@ -186,11 +213,11 @@ namespace CoreEscuela.Entidades
                             };
 
             
-                    foreach (var item in Escuela.Cursos)
+                    foreach (var curso in Escuela.Cursos)
                     {
                         Random cantidad = new Random();
                         int cantidadrandom = cantidad.Next(30, 50);
-                        item.Alumnos = GenerarAlumnos(cantidadrandom);
+                        curso.Alumnos = GenerarAlumnos(cantidadrandom);
                     }
 
         }

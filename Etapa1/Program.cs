@@ -20,21 +20,21 @@ namespace Etapa1
         var nuevoReporteador = new Reporteador(engine.GetObjetosDiccionario());        
         var listaevaluaciones = nuevoReporteador.getNotas();
         
-        foreach (var item in listaevaluaciones)
+        /*foreach (var item in listaevaluaciones)
         {
             Console.WriteLine($"{item.Nombre} NOTA : {item.Nota}");
-        }
-        Console.WriteLine(listaevaluaciones.Count());
+        }*/
+        
 
-        //nuevoReporteador.getAlumnos();
+        nuevoReporteador.getAlumnos();
                 
 
         //engine.imprimirDiccionario(dicc);                        
 
 
            //Util.Timbrar();
-           /*Util.printTitle($"Bienvenidos a la Escuela {escuela1.Escuela.Nombre}");
-           foreach (var curso in escuela1.Escuela.Cursos)
+          /* Util.printTitle($"Bienvenidos a la Escuela {engine.Escuela.Nombre}");
+           foreach (var curso in engine.Escuela.Cursos)
            {               
                foreach (var al in curso.Alumnos)
                {    

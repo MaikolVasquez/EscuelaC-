@@ -45,6 +45,22 @@ namespace CoreEscuela.Entidades
         {
             var listaalumnos = diccionario[ListaLaveDiccionario.Alumnos].Cast<Alumno>();
             
+            
+            /*foreach (var alumno in listaalumnos)
+            {
+               foreach (var asignatura in alumno.Asignaturas)
+               {
+                   var listalinq = from ev in asignatura.Evaluaciones
+                                    group ev.Nota by asignatura
+                                    into evpromedio
+                                    select new List<Evaluacion>{
+                                        
+                                    };
+               }               
+                                
+            }*/
+                            
+
             foreach (var alumno in listaalumnos)
             {       
                 Console.WriteLine($"Alumno : {alumno.Nombre}");         
@@ -57,7 +73,7 @@ namespace CoreEscuela.Entidades
                        nota += evaluacion.Nota; 
                     }
                     Console.WriteLine($" promedio nota : {Math.Round((nota/5),2)}");
-// ya puedo sacar el promedio pero las notas estan dandose igual por cada alumno se debe arreglar                    
+                    
                 }
             }
             
