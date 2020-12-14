@@ -18,7 +18,15 @@ namespace Etapa1
                                                                   
 
         var nuevoReporteador = new Reporteador(engine.GetObjetosDiccionario());        
-        nuevoReporteador.getNotas();
+        var listaevaluaciones = nuevoReporteador.getNotas();
+        
+        foreach (var item in listaevaluaciones)
+        {
+            Console.WriteLine($"{item.Nombre} NOTA : {item.Nota}");
+        }
+        Console.WriteLine(listaevaluaciones.Count());
+
+        //nuevoReporteador.getAlumnos();
                 
 
         //engine.imprimirDiccionario(dicc);                        

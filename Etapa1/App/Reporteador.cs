@@ -30,16 +30,39 @@ namespace CoreEscuela.Entidades
                 return rta = new List<Evaluacion>();                
             }
         }
-        public void getNotas()
+        public IEnumerable<Evaluacion> getNotas()
         {
             var listaTemporalEvaluaciones = getEvaluaciones();
                 var Nuevalist = from ev in listaTemporalEvaluaciones
-                                where ev.Nota > 3
-                                select ev;      
-//si esta haciendo la consulta pero esta tomando los datos donde las notas son 0          
+                                where ev.Nota > 4
+                                select ev;    
+            return Nuevalist;  
+
             
         }
         
+        public void getAlumnos()
+        {
+            var listaalumnos = diccionario[ListaLaveDiccionario.Alumnos].Cast<Alumno>();
+            
+            foreach (var alumno in listaalumnos)
+            {       
+                Console.WriteLine($"Alumno : {alumno.Nombre}");         
+                foreach (var asignatura in alumno.Asignaturas)
+                {
+                    Console.WriteLine(asignatura.Nombre);
+                    double nota = 0;
+                    foreach (var evaluacion in asignatura.Evaluaciones)
+                    {
+                       nota += evaluacion.Nota; 
+                    }
+                    Console.WriteLine($" promedio nota : {Math.Round((nota/5),2)}");
+// ya puedo sacar el promedio pero las notas estan dandose igual por cada alumno se debe arreglar                    
+                }
+            }
+            
+            
+        }
 
     }
 }

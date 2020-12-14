@@ -148,11 +148,11 @@ namespace CoreEscuela.Entidades
                     al.Asignaturas = Asignaturas;
                     foreach (var asignatura in al.Asignaturas)
                     {
+                        Random cantidad = new Random();
                         asignatura.Evaluaciones = GenerarEvaluaciones();
                         foreach (var evaluacion in asignatura.Evaluaciones)
-                        {
-                            Random cantidad = new Random();
-                            double cantidadrandom = (cantidad.NextDouble() + cantidad.Next(1,5));
+                        {                            
+                            double cantidadrandom = (cantidad.NextDouble() + cantidad.Next(0,5));
                             evaluacion.Nota = Math.Round(cantidadrandom,1);
                         }
                     }
